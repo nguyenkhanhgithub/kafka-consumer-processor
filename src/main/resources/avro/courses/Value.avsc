@@ -1,0 +1,168 @@
+{
+  "type": "record",
+  "name": "Value",
+  "namespace": "lms.courses.course",
+  "fields": [
+    {
+      "name": "id",
+      "type": {
+        "type": "int",
+        "connect.default": 0
+      },
+      "default": 0
+    },
+    {
+      "name": "title",
+      "type": "string"
+    },
+    {
+      "name": "headline",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "instructors",
+      "type": [
+        "null",
+        {
+          "type": "string",
+          "connect.version": 1,
+          "connect.name": "io.debezium.data.Json"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "objectives_summary",
+      "type": [
+        "null",
+        {
+          "type": "string",
+          "connect.version": 1,
+          "connect.name": "io.debezium.data.Json"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "is_paid",
+      "type": [
+        {
+          "type": "boolean",
+          "connect.default": false
+        },
+        "null"
+      ],
+      "default": false
+    },
+    {
+      "name": "published_time",
+      "type": [
+        "null",
+        {
+          "type": "long",
+          "connect.version": 1,
+          "connect.name": "io.debezium.time.MicroTimestamp"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "num_reviews",
+      "type": [
+        {
+          "type": "double",
+          "connect.default": 0.0
+        },
+        "null"
+      ],
+      "default": 0.0
+    },
+    {
+      "name": "rating",
+      "type": [
+        {
+          "type": "double",
+          "connect.default": 0.0
+        },
+        "null"
+      ],
+      "default": 0.0
+    },
+    {
+      "name": "images",
+      "type": [
+        "null",
+        {
+          "type": "string",
+          "connect.version": 1,
+          "connect.name": "io.debezium.data.Json"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "is_published",
+      "type": [
+        {
+          "type": "boolean",
+          "connect.default": false
+        },
+        "null"
+      ],
+      "default": false
+    },
+    {
+      "name": "created_at",
+      "type": [
+        "null",
+        {
+          "type": "long",
+          "connect.version": 1,
+          "connect.name": "io.debezium.time.MicroTimestamp"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "updated_at",
+      "type": [
+        "null",
+        {
+          "type": "long",
+          "connect.version": 1,
+          "connect.name": "io.debezium.time.MicroTimestamp"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "category_id",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    },
+    {
+      "name": "level_id",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    },
+    {
+      "name": "partner_id",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    }
+  ],
+  "connect.name": "lms.courses.course.Value"
+}

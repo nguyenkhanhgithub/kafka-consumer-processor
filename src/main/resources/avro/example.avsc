@@ -1,0 +1,24 @@
+{
+  "namespace": "com.cmcglobal.avro",
+  "type": "record",
+  "name": "ExampleAvro",
+  "fields": [
+    {
+        "name": "id",
+        "type": "int"
+    },
+    {
+        "name": "name",
+        "type": [
+            "null",
+            "string"
+        ],
+        "default": null
+    },
+    {
+         "name": "age",
+        "type": "int"
+    }
+  ],
+  "connect.name": "lms.schema.table.Value"
+}
