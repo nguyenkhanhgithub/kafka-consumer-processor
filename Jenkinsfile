@@ -27,7 +27,6 @@ node {
        sh "docker login -u ${env.DOCKER_USERNAME} -p ${env.DOCKER_PASSWORD} docker.io"
        sh "docker push ${registry}/${imageName}:${version}"
    }
-
    switch(env.BRANCH_NAME) {
        case 'develop':
             stage("Deploy") {
