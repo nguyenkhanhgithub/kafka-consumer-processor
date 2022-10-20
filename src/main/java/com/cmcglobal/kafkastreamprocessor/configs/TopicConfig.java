@@ -9,16 +9,4 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @Log4j2
 public class TopicConfig {
-    public static final String DOMAIN_EVENT_TOPIC = "lms.schema.table";
-
-    @Value("${spring.kafka.topic.num-partition}")
-    private int numPartitions;
-
-    @Value("${spring.kafka.topic.replication-factor}")
-    private short replicationFactor;
-
-    @Bean
-    public NewTopic topic() {
-        return new NewTopic(DOMAIN_EVENT_TOPIC, numPartitions, replicationFactor);
-    }
 }

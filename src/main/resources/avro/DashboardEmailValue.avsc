@@ -1,0 +1,40 @@
+{
+  "namespace": "com.cmcglobal.dashboard.avro",
+  "type": "record",
+  "name": "DashboardEmailValue",
+  "fields": [
+    {
+      "name": "id",
+      "type": "int",
+      "default": 1
+    },
+    {
+      "name": "type",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "version",
+      "type": {
+        "type": "int",
+        "connect.type": "int16"
+      }
+    },
+    {
+      "name": "content",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "created_at",
+      "type": "long",
+      "default": 0
+    }
+  ]
+}

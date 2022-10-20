@@ -1,0 +1,29 @@
+{
+  "namespace": "com.cmcglobal.hrms.avro",
+  "type": "record",
+  "name": "HrmsRequestValueAvro",
+  "fields": [
+    {
+      "name": "id",
+      "type": "int",
+      "default": 1
+    },
+    {
+      "name": "system",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "content",
+      "type": "bytes"
+    },
+    {
+      "name": "created_at",
+      "type": "long",
+      "default": 0
+    }
+  ]
+}
