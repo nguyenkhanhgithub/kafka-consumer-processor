@@ -31,6 +31,7 @@ node {
        case 'develop':
             stage("Deploy") {
                sh "echo ${env.BRANCH_NAME}"
+               sh "echo ${env.BRANCH_NAME}"
 //                def oldContainerID = sh(script: "docker ps -a -q  --filter ancestor=${registry}/${imageName}:${version}", returnStdout: true)
 //                def status = true
 //                if ("${oldContainerID}" != '') {
