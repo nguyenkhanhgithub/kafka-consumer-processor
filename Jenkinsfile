@@ -50,7 +50,6 @@ node {
 //                         --header 'Authorization: Bearer ${env.RANCHER_API_TOKEN}'"""
             }
             break;
-
        case 'uat':
             stage("Deploy") {
                 sh "echo ${env.BRANCH_NAME}"
