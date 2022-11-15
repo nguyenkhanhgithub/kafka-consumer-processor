@@ -17,6 +17,6 @@ public class ConsumerExampleImpl implements BaseConsumerInterface {
             maxAttempts = 10, // default 3
             backoff = @Backoff(delay = 10))
     public void consumer(@Payload(required = false) DashboardEmailValue value) {
-        log.info("dashboard email value 1{}", value);
+        log.info("dashboard email value 2{}", value);
     }
 }
