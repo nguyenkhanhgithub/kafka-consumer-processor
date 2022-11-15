@@ -31,21 +31,21 @@ node {
        case 'develop':
             stage("Deploy") {
                sh "echo ${env.BRANCH_NAME}"
-               def oldContainerID = sh(script: "docker ps -a -q  --filter ancestor=${registry}/${imageName}:${version}", returnStdout: true)
-               def status = true
-               if ("${oldContainerID}" != '') {
-                   echo "Deleting image id: ${oldContainerID}..."
-                   echo status
+//                def oldContainerID = sh(script: "docker ps -a -q  --filter ancestor=${registry}/${imageName}:${version}", returnStdout: true)
+//                def status = true
+//                if ("${oldContainerID}" != '') {
+//                    echo "Deleting image id: ${oldContainerID}..."
+//                    echo status
 //                    sh "docker stop ${oldContainerID}"
 //                    sh "docker container rm ${oldContainerID}"
-               }
+//                }
                 // check old image if exists and delete old image
 //                def oldImageID = sh(script: "docker images -qf reference=${registry}/${imageName}:${version}",returnStdout: true)
-               if ("${oldImageID}" != '') {
+//                if ("${oldImageID}" != '') {
 //                    echo "Deleting image id: ${oldImageID}..."
 //                    sh "docker rmi -f ${oldImageID}"
 //                    sh "docker rmi \$(docker images -qf reference=${registry}/${imageName} -q)"
-               }
+//                }
 //                 sh """curl -k --location --request POST '${env.RANCHER_API_URL}/project/${projectId}/workloads/deployment:${namespace}:${deployment}?action=redeploy' \
 //                         --header 'Authorization: Bearer ${env.RANCHER_API_TOKEN}'"""
             }
