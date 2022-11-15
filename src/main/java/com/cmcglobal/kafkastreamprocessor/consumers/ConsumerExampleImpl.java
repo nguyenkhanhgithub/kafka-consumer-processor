@@ -11,7 +11,6 @@ import org.springframework.kafka.annotation.KafkaListener;
 @Component
 @Log4j2
 public class ConsumerExampleImpl implements BaseConsumerInterface {
-
     @KafkaListener(topics = "dashboard.email.topic", groupId = "dashboard.email")
     @Retryable(
             value = {Exception.class},
